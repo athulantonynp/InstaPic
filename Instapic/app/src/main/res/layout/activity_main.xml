@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context="algo.antomium.com.instapic.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/myToolBar"
+        android:background="@drawable/header">
+        <ImageView
+            android:layout_width="26dp"
+            android:id="@+id/icon"
+            android:src="@drawable/camera"
+            android:layout_height="30dp"
+            android:onClick="loadCam"
+            android:layout_marginLeft="300dp" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="317dp"
+            app:srcCompat="@drawable/main"
+            android:id="@+id/ivResult"
+            android:layout_gravity="center" />
+    </LinearLayout>
+    <HorizontalScrollView
+        android:id="@+id/hsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.23">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="397dp"
+        android:layout_weight="0.15"
+        android:id="@+id/llFilter"
+        android:layout_height="90dp">
+
+
+        <ImageView
+            android:layout_width="91dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/image"
+            android:id="@+id/ivGrayScale"
+            android:onClick="grayScaleClick"/>
+
+        <ImageView
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/image"
+            android:id="@+id/ivHue"
+            android:layout_width="91dp"
+            android:onClick="hueClick"/>
+
+        <ImageView
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/image"
+            android:id="@+id/ivSepia"
+            android:layout_width="91dp"
+            android:onClick="sepiaClick"/>
+
+        <ImageView
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/image"
+            android:id="@+id/ivInvert"
+            android:layout_width="91dp"
+            android:onClick="invertClick"/>
+
+        <ImageView
+            android:layout_width="91dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/image"
+            android:id="@+id/ivBoost"
+            android:layout_weight="1"
+            android:onClick="boostClick"/>
+
+        <ImageView
+            android:layout_width="91dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/image"
+            android:id="@+id/ivTint"
+            android:layout_weight="1"
+            android:onClick="tintClick"/>
+
+        <ImageView
+            android:layout_width="91dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/image"
+            android:id="@+id/ivSepia2"
+            android:layout_weight="1"
+            android:onClick="sepia2Click"/>
+
+    </LinearLayout>
+</HorizontalScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.53"
+        android:weightSum="1"
+        android:id="@+id/llLoad">
+
+
+        <TextView
+            android:text="Click on the filters You Want"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvStatus"
+            android:textSize="20sp"
+            android:textColor="@android:color/background_light"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+</LinearLayout>
